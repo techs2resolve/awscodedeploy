@@ -8,11 +8,11 @@ hooks:
     - location: scripts/install_dependencies
       timeout: 300
       runas: root
-#    - location: scripts/start_server
-#      timeout: 300
-#      runas: root
+    - location: scripts/start_server
+      timeout: 300
+      runas: root
   AfterInstall:
-    - location: script/start_server
+    - location: script/start_node_server
     - timeout: 300
     - runas: root
   ApplicationStop:
