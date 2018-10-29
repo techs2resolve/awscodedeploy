@@ -1,4 +1,13 @@
 #!/bin/bash
 
 cd /var/www/html/
-pm2 start server.js
+netstat -tlnp | grep "3000"
+if [ $? -eq 0 ];
+then
+        echo "NODEJS SERVER IS RUNNING"
+
+else
+       echo "STARTING NODEJS SERVER"
+    	pm2 start server.js
+fi
+
