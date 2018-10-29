@@ -1,5 +1,5 @@
 #!/bin/bash
 yum install -y httpd mysql-server 
 curl --silent --location https://rpm.nodesource.com/setup_11.x | sudo bash -
-yum install nodejs npm
+yum install -y nodejs npm
 npm install pm2 -g
